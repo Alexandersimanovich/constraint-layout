@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_second__top_image"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_second__left_image"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_second__top_image"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/activity_second__header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/activity_second__left_image"
+        app:layout_constraintTop_toBottomOf="@id/activity_second__top_image" />
+
+    <TextView
+        android:id="@+id/activity_second__released_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Released:"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/activity_second__left_image"
+        app:layout_constraintTop_toBottomOf="@id/activity_second__header_text" />
+
+    <TextView
+        android:id="@+id/activity_second__date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="April 11, 2013"
+        app:layout_constraintStart_toEndOf="@id/activity_second__released_text"
+        app:layout_constraintTop_toBottomOf="@id/activity_second__header_text"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/activity_main__description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_second__left_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="20dp"/>
+
+    <Button
+        android:clickable="true"
+        android:id="@+id/activity_main__button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MOVIE TRAILER"
+        app:layout_constraintStart_toEndOf="@id/activity_second__left_image"
+        app:layout_constraintTop_toBottomOf="@id/activity_second__released_text"
+        android:layout_margin="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

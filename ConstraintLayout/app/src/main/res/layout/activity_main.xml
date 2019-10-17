@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_main__top_image"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:src="@drawable/kinogallerycompaingain255671"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_main__left_image"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:src="@drawable/kinogallerycompaingain255671"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main__top_image"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/activity_main__header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Pain &amp; Gain: Anabolics"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/activity_main__left_image"
+        app:layout_constraintTop_toBottomOf="@id/activity_main__top_image" />
+
+    <TextView
+        android:id="@+id/activity_main__released_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Released:"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/activity_main__left_image"
+        app:layout_constraintTop_toBottomOf="@id/activity_main__header_text" />
+
+    <TextView
+        android:id="@+id/activity_main__date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="April 11, 2013"
+        app:layout_constraintStart_toEndOf="@id/activity_main__released_text"
+        app:layout_constraintTop_toBottomOf="@id/activity_main__header_text"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/activity_main__description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pain &amp; Gain is a 2013 American dark comedy crime film directed by Michael Bay and starring Mark Wahlberg, Dwayne Johnson, and Anthony Mackie. The film is loosely based on a story Pete Collins published in a 1999 series of Miami New Times articles and compiled in the book Pain &amp; Gain: This Is a True Story (2013), which details the kidnapping, extortion, torture, and murder of several victims by the Sun Gym gang.[4][5] The film's title is a play on the common adage, frequently used in fitness: No pain, no gain."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main__left_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="20dp"/>
+
+    <Button
+        android:clickable="true"
+        android:id="@+id/activity_main__button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MOVIE TRAILER"
+        app:layout_constraintStart_toEndOf="@id/activity_main__left_image"
+        app:layout_constraintTop_toBottomOf="@id/activity_main__released_text"
+        android:layout_margin="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
