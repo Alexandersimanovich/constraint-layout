@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
+val moviekey = "movie_activity_movie"
 class MoviesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,9 +22,9 @@ class MoviesActivity : AppCompatActivity() {
 
         val list = findViewById<RecyclerView>(R.id.recyclerView)
         val movies = generateMovie()
-        val adapter = MovieAdapter(movies) { movie ->
+        val adapter = MovieAdapter(movies, { movie ->
             movieClicked(movie)
-        }
+        })
         list.adapter = adapter
         list.layoutManager = LinearLayoutManager(this)
 
@@ -31,7 +32,7 @@ class MoviesActivity : AppCompatActivity() {
 
     private fun movieClicked(movie: Movie) {
         val intent = Intent(this, SecondActivity::class.java)
-        intent.putExtra("movie_activity_movie", movie)
+        intent.putExtra(moviekey, movie)
         startActivity(intent)
     }
 

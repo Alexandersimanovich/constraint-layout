@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_movie_heigh">100dp</dimen>
+    <dimen name="list_item_movie_padding">5dp</dimen>
+    <dimen name="list_item_avatar_width">70dp</dimen>
+</resources>
